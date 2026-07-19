@@ -1,7 +1,7 @@
 {
   "name": "Temporary Home Assistant Server",
   "image": "ghcr.io/home-assistant/home-assistant:stable",
-  "forwardPorts":,
+  "forwardPorts": 8123,
   "portsAttributes": {
     "8123": {
       "label": "Home Assistant UI",
