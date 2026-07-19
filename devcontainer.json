@@ -1,0 +1,17 @@
+{
+  "name": "Temporary Home Assistant Server",
+  "image": "ghcr.io/home-assistant/home-assistant:stable",
+  "forwardPorts":,
+  "portsAttributes": {
+    "8123": {
+      "label": "Home Assistant UI",
+      "onAutoForward": "openBrowser",
+      "elevationRequired": false
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": []
+    }
+  }
+}
