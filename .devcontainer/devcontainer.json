@@ -1,7 +1,8 @@
 {
   "name": "Temporary Home Assistant Server",
   "image": "ghcr.io/home-assistant/home-assistant:stable",
-  "forwardPorts": 8123,
+  "appPort":,
+  "forwardPorts":,
   "portsAttributes": {
     "8123": {
       "label": "Home Assistant UI",
@@ -9,9 +10,12 @@
       "elevationRequired": false
     }
   },
-  "customizations": {
-    "codespaces": {
-      "openFiles": []
-    }
-  }
+  "containerEnv": {
+    "PYTHONPATH": "/usr/src/homeassistant"
+  },
+  "overrideCommand": false,
+  "mounts": [
+    "source=${localWorkspaceFolder}/config,target=/config,type=bind"
+  ]
 }
+
